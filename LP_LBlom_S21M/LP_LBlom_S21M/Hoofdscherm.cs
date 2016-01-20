@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace LP_LBlom_S21M
 {
-    public partial class Form1 : Form
+    public partial class Hoofdscherm : Form
     {
-        public Form1()
+        public Hoofdscherm()
         {
             InitializeComponent();
+        }
+
+        private void btnNewVisit_Click(object sender, EventArgs e)
+        {
+            Waarneming w = new Waarneming();
+            w.Show();
+            this.Hide();
         }
     }
 }
