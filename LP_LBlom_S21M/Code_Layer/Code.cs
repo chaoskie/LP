@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Code_Layer
 {
-    class Code
+    public class Code
     {
         public string Afkorting { get; set; }
         public string Naam { get; set; }

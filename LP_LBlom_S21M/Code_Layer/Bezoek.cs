@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Code_Layer
 {
+    [Serializable]
     public class Bezoek
-    {
-        public DateTime Starttijd { get; set; }
-        public DateTime Eindtijd { get; set; }
+    {      
+        public DateTime Starttijd ;
+
+        public DateTime Eindtijd;
+
         public List<Waarneming> Waarnemingen;
 
         public Bezoek()

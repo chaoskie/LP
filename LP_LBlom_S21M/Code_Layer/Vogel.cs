@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Code_Layer
 {
-    class Vogel : Diersoort, IComparer<Vogel>
+    public class Vogel : Diersoort, IComparer<Vogel>
     {
         //comparer atributes?
 

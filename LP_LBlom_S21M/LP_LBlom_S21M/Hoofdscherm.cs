@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GUI_Handler;
 
 namespace LP_LBlom_S21M
 {
@@ -15,6 +16,7 @@ namespace LP_LBlom_S21M
         public Hoofdscherm()
         {
             InitializeComponent();
+            Handler Handler = new Handler();
         }
 
         private void btnNewVisit_Click(object sender, EventArgs e)

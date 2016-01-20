@@ -5,8 +5,10 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 
+
 namespace Code_Layer
 {
+    [Serializable]
     public class Waarneming
     {
         public PointF LocatieX { get; set; }
