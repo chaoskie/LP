@@ -28,5 +28,17 @@ namespace LP_LBlom_S21M
             w.Show();              
             this.Hide();
         }
+
+        private void btnExportXML_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new GUI_Handler.ExportException("Er is niet voldaan aan de eisen om te exporteren.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace Code_Layer
     public class Bezoek
     {      
         
-        public DateTime Starttijd {get; set;} ;
+        public DateTime Starttijd {get; set;} 
 
         public DateTime Eindtijd {get; set;}
 

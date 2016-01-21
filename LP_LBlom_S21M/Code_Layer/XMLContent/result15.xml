@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Starttijd>2016-01-21T15:45:59.173919+01:00</Starttijd>
+  <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+  <Bezoeken>
+    <Bezoek>
+      <Waarnemingen>
+        <Waarneming>
+          <LocatieX>465</LocatieX>
+          <LocatieY>252</LocatieY>
+          <Afkorting>
+            <Afkorting>VA</Afkorting>
+            <Naam>Vogel Aanwezig</Naam>
+            <Punten>1</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Appelvink</Naam>
+            <Afkorting>AV</Afkorting>
+            <StartBroedseizoen>2000-03-15T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-06-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>3</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T15:46:01.1645697+01:00</Tijd>
+        </Waarneming>
+        <Waarneming>
+          <LocatieX>275</LocatieX>
+          <LocatieY>188</LocatieY>
+          <Afkorting>
+            <Afkorting>VA</Afkorting>
+            <Naam>Vogel Aanwezig</Naam>
+            <Punten>1</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Appelvink</Naam>
+            <Afkorting>AV</Afkorting>
+            <StartBroedseizoen>2000-03-15T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-06-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>3</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T15:46:04.4696703+01:00</Tijd>
+        </Waarneming>
+      </Waarnemingen>
+      <Starttijd>2016-01-21T15:45:59.173919+01:00</Starttijd>
+      <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+    </Bezoek>
+  </Bezoeken>
+</Project>

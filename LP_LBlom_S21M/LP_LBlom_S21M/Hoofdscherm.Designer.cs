@@ -91,6 +91,7 @@
             this.btnExportXML.Size = new System.Drawing.Size(75, 42);
             this.btnExportXML.TabIndex = 6;
             this.btnExportXML.Text = "Gegevens exporteren";
+            this.btnExportXML.Click += new System.EventHandler(this.btnExportXML_Click);
             // 
             // Hoofdscherm
             // 

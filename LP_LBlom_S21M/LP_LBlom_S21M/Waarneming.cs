@@ -145,6 +145,10 @@ namespace LP_LBlom_S21M
             {
                 display += s + "\n";
             }
+            if(string.IsNullOrEmpty(display))
+            {
+                display = "Er zijn geen broedparen gevonden!";
+            }
             MessageBox.Show(display);
         }
 
