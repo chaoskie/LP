@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Starttijd>2016-01-21T11:58:46.5089114+01:00</Starttijd>
+  <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+  <Bezoeken>
+    <Bezoek>
+      <Starttijd>2016-01-21T11:58:46.5089114+01:00</Starttijd>
+      <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+      <Waarnemingen>
+        <Waarneming>
+          <LocatieX>599</LocatieX>
+          <LocatieY>193</LocatieY>
+          <Afkorting>
+            <Afkorting>TI</Afkorting>
+            <Naam>Territorium Indicerend</Naam>
+            <Punten>2</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Appelvink</Naam>
+            <Afkorting>AV</Afkorting>
+            <StartBroedseizoen>2000-03-15T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-06-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>3</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T11:58:49.9236098+01:00</Tijd>
+        </Waarneming>
+        <Waarneming>
+          <LocatieX>283</LocatieX>
+          <LocatieY>156</LocatieY>
+          <Afkorting>
+            <Afkorting>NI</Afkorting>
+            <Naam>Nest Indicerend</Naam>
+            <Punten>3</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Geelgors</Naam>
+            <Afkorting>GG</Afkorting>
+            <StartBroedseizoen>2000-04-01T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-07-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>5</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T11:59:04.6045681+01:00</Tijd>
+        </Waarneming>
+        <Waarneming>
+          <LocatieX>381</LocatieX>
+          <LocatieY>210</LocatieY>
+          <Afkorting>
+            <Afkorting>VA</Afkorting>
+            <Naam>Vogel Aanwezig</Naam>
+            <Punten>1</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Geelgors</Naam>
+            <Afkorting>GG</Afkorting>
+            <StartBroedseizoen>2000-04-01T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-07-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>5</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T11:59:08.8774356+01:00</Tijd>
+        </Waarneming>
+      </Waarnemingen>
+    </Bezoek>
+  </Bezoeken>
+</Project>

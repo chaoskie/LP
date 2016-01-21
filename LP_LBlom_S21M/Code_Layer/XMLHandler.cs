@@ -15,15 +15,20 @@ namespace Code_Layer
         private string FilePath;
         private string XMLPath;
         private string filename;
+
         int count = 0;
 
+        //constructor
         public XMLHandler()
         {
             AppPath = Assembly.GetEntryAssembly().Location;
             FilePath = AppPath.Substring(0, AppPath.Length - "LP_LBlom_S21M\\bin\\Debug\\LP_LBlom_S21M.exe".Length);
             XMLPath = FilePath + "Code_Layer\\XMLContent\\";
         }
-
+        /// <summary>
+        /// deze methode gaat controleren welke naam 
+        /// er beschikbaar is in de XML bestanden
+        /// </summary>
         public void NewNameFile()
         {
             while (File.Exists(XMLPath + "result" + count.ToString() + ".xml"))
@@ -32,6 +37,12 @@ namespace Code_Layer
             }            
         }
 
+        /// <summary>
+        /// verwerk de data in het project object tot XML file
+        /// </summary>
+        /// <param name="proj">te verwerken tot XML file</param>
+        /// <param name="newFile">moet er een nieuw bestand gemaakt worden</param>
+        /// <returns>succes boolean</returns>
         public bool VewerkData(Project proj, bool newFile)
         {
             if (newFile)
@@ -52,9 +63,7 @@ namespace Code_Layer
             // maken van het override attribuut
             XmlAttributeOverrides attrOverrides = new XmlAttributeOverrides();
 
-            // Adds the type of the class that contains the overridden 
-            // member, as well as the XmlAttributes instance to override it 
-            // with, to the XmlAttributeOverrides.
+            // voeg de override waarde toe aan de lijst met het veld dat de inheritance heeft samen met de attribuuten
             attrOverrides.Add(typeof(Waarneming), "Dier", xmlAttrs);
 
             try
@@ -75,7 +84,10 @@ namespace Code_Layer
             }
             return true;
         }
-
+        /// <summary>
+        /// exporteer de XML bestanden naar de database
+        /// </summary>
+        /// <returns>succes boolean</returns>
         public bool ExportXML()
         {
             //TODO

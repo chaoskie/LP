@@ -33,22 +33,26 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exporterenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.cbVogelSoortenZoeken = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnZoekVogelMarkering = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbVogelsoort = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnVA = new System.Windows.Forms.Button();
-            this.btnTI = new System.Windows.Forms.Button();
-            this.btnNI = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnNI = new System.Windows.Forms.Button();
+            this.btnTI = new System.Windows.Forms.Button();
+            this.btnVA = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbVogelsoort = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.berekenBroedpuntenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -70,7 +74,8 @@
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.afsluitenToolStripMenuItem,
-            this.exporterenToolStripMenuItem});
+            this.exporterenToolStripMenuItem,
+            this.berekenBroedpuntenToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
@@ -80,14 +85,41 @@
             // afsluitenToolStripMenuItem
             // 
             this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.afsluitenToolStripMenuItem.Text = "Afsluiten";
+            this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.afsluitenToolStripMenuItem_Click);
             // 
             // exporterenToolStripMenuItem
             // 
             this.exporterenToolStripMenuItem.Name = "exporterenToolStripMenuItem";
-            this.exporterenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exporterenToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.exporterenToolStripMenuItem.Text = "Exporteren";
+            this.exporterenToolStripMenuItem.Click += new System.EventHandler(this.exporterenToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(49, 22);
+            this.toolStripLabel1.Text = "Zoeken ";
+            // 
+            // cbVogelSoortenZoeken
+            // 
+            this.cbVogelSoortenZoeken.Name = "cbVogelSoortenZoeken";
+            this.cbVogelSoortenZoeken.Size = new System.Drawing.Size(121, 25);
+            // 
+            // btnZoekVogelMarkering
+            // 
+            this.btnZoekVogelMarkering.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnZoekVogelMarkering.Image = ((System.Drawing.Image)(resources.GetObject("btnZoekVogelMarkering.Image")));
+            this.btnZoekVogelMarkering.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnZoekVogelMarkering.Name = "btnZoekVogelMarkering";
+            this.btnZoekVogelMarkering.Size = new System.Drawing.Size(40, 22);
+            this.btnZoekVogelMarkering.Text = "Zoek!";
             // 
             // panel1
             // 
@@ -103,31 +135,6 @@
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(49, 22);
-            this.toolStripLabel1.Text = "Zoeken ";
-            // 
-            // cbVogelSoortenZoeken
-            // 
-            this.cbVogelSoortenZoeken.Name = "cbVogelSoortenZoeken";
-            this.cbVogelSoortenZoeken.Size = new System.Drawing.Size(121, 25);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // btnZoekVogelMarkering
-            // 
-            this.btnZoekVogelMarkering.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnZoekVogelMarkering.Image = ((System.Drawing.Image)(resources.GetObject("btnZoekVogelMarkering.Image")));
-            this.btnZoekVogelMarkering.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnZoekVogelMarkering.Name = "btnZoekVogelMarkering";
-            this.btnZoekVogelMarkering.Size = new System.Drawing.Size(40, 22);
-            this.btnZoekVogelMarkering.Text = "Zoek!";
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -141,47 +148,37 @@
             this.groupBox1.Controls.Add(this.cbVogelsoort);
             this.groupBox1.Location = new System.Drawing.Point(704, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(216, 317);
+            this.groupBox1.Size = new System.Drawing.Size(216, 221);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Markeringen";
             // 
-            // cbVogelsoort
+            // label4
             // 
-            this.cbVogelsoort.FormattingEnabled = true;
-            this.cbVogelsoort.Location = new System.Drawing.Point(60, 53);
-            this.cbVogelsoort.Name = "cbVogelsoort";
-            this.cbVogelsoort.Size = new System.Drawing.Size(138, 21);
-            this.cbVogelsoort.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nest Indicerend";
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Vogelsoorten:";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Territorium Indicerend";
             // 
-            // btnVA
+            // label2
             // 
-            this.btnVA.Location = new System.Drawing.Point(125, 116);
-            this.btnVA.Name = "btnVA";
-            this.btnVA.Size = new System.Drawing.Size(75, 23);
-            this.btnVA.TabIndex = 2;
-            this.btnVA.Text = "VA";
-            this.btnVA.UseVisualStyleBackColor = true;
-            this.btnVA.Click += new System.EventHandler(this.btnVA_Click);
-            // 
-            // btnTI
-            // 
-            this.btnTI.Location = new System.Drawing.Point(125, 145);
-            this.btnTI.Name = "btnTI";
-            this.btnTI.Size = new System.Drawing.Size(75, 23);
-            this.btnTI.TabIndex = 3;
-            this.btnTI.Text = "TI";
-            this.btnTI.UseVisualStyleBackColor = true;
-            this.btnTI.Click += new System.EventHandler(this.btnTI_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Vogel Aanwezig";
             // 
             // btnNI
             // 
@@ -193,38 +190,77 @@
             this.btnNI.UseVisualStyleBackColor = true;
             this.btnNI.Click += new System.EventHandler(this.btnNI_Click);
             // 
-            // label2
+            // btnTI
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Vogel Aanwezig";
+            this.btnTI.Location = new System.Drawing.Point(125, 145);
+            this.btnTI.Name = "btnTI";
+            this.btnTI.Size = new System.Drawing.Size(75, 23);
+            this.btnTI.TabIndex = 3;
+            this.btnTI.Text = "TI";
+            this.btnTI.UseVisualStyleBackColor = true;
+            this.btnTI.Click += new System.EventHandler(this.btnTI_Click);
             // 
-            // label3
+            // btnVA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Territorium Indicerend";
+            this.btnVA.Enabled = false;
+            this.btnVA.Location = new System.Drawing.Point(125, 116);
+            this.btnVA.Name = "btnVA";
+            this.btnVA.Size = new System.Drawing.Size(75, 23);
+            this.btnVA.TabIndex = 2;
+            this.btnVA.Text = "VA";
+            this.btnVA.UseVisualStyleBackColor = true;
+            this.btnVA.Click += new System.EventHandler(this.btnVA_Click);
             // 
-            // label4
+            // label1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 180);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Nest Indicerend";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Vogelsoorten:";
+            // 
+            // cbVogelsoort
+            // 
+            this.cbVogelsoort.FormattingEnabled = true;
+            this.cbVogelsoort.Location = new System.Drawing.Point(60, 53);
+            this.cbVogelsoort.Name = "cbVogelsoort";
+            this.cbVogelsoort.Size = new System.Drawing.Size(138, 21);
+            this.cbVogelsoort.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.lblResult);
+            this.groupBox2.Location = new System.Drawing.Point(705, 272);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(215, 187);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Waarneming";
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(17, 35);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(57, 13);
+            this.lblResult.TabIndex = 0;
+            this.lblResult.Text = "Onbekend";
+            // 
+            // berekenBroedpuntenToolStripMenuItem
+            // 
+            this.berekenBroedpuntenToolStripMenuItem.Name = "berekenBroedpuntenToolStripMenuItem";
+            this.berekenBroedpuntenToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.berekenBroedpuntenToolStripMenuItem.Text = "bereken broedpunten";
+            this.berekenBroedpuntenToolStripMenuItem.Click += new System.EventHandler(this.berekenBroedpuntenToolStripMenuItem_Click);
             // 
             // Waarneming
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 539);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
@@ -234,6 +270,8 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +297,8 @@
         private System.Windows.Forms.Button btnVA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbVogelsoort;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.ToolStripMenuItem berekenBroedpuntenToolStripMenuItem;
     }
 }

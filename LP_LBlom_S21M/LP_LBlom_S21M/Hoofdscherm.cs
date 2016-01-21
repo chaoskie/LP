@@ -18,6 +18,8 @@ namespace LP_LBlom_S21M
         {
             InitializeComponent();
             Handler = new Handler();
+            comboBox1.Enabled = false;
+            comboBox1.Text = "Aabroeken";
         }
 
         private void btnNewVisit_Click(object sender, EventArgs e)

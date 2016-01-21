@@ -29,22 +29,28 @@ namespace Code_Layer
             this.Tijd = DateTime.Now;
         }
 
+        /// <summary>
+        /// details terug geven over de 
+        /// waarneming
+        /// </summary>
+        /// <returns>lijst van entries over de waarneming</returns>
         public List<string> Geefdetails()
         {
             return null;
             //TODO
+            //mogelijk vervangen/verplaatsen door...?
         }
 
+        /// <summary>
+        /// Diersoort van de waarneming aanpassen
+        /// </summary>
+        /// <param name="dier">nieuwe diersoort</param>
+        /// <returns>succes bool</returns>
         public bool PasDiersoortAan(Diersoort dier)
         {
             this.Dier = dier;
             return true;
         }
 
-        public override string ToString()
-        {
-            //TODO
-            return base.ToString();
-        }
     }
 }

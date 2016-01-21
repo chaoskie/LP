@@ -14,6 +14,7 @@ namespace Code_Layer
         private string AppPath;
         private string FilePath;
 
+        //constuctor
         public CSVReader()
         {
             AppPath = Assembly.GetEntryAssembly().Location;
@@ -21,8 +22,9 @@ namespace Code_Layer
         }
 
         /// <summary>
-        /// Loads from the default location
+        /// inladen van het CSV bestand met verschillende diersoorten
         /// </summary>
+        /// <returns>lijst van ingeladen dieren</returns>
         public List<Diersoort> Load()
         {
             List<Diersoort> loadedAnimals = new List<Diersoort>();

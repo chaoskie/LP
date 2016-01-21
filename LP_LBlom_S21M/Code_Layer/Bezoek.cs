@@ -9,35 +9,53 @@ namespace Code_Layer
 {
     public class Bezoek
     {      
-        public DateTime Starttijd ;
+        
+        public DateTime Starttijd {get; set;} ;
 
-        public DateTime Eindtijd;
+        public DateTime Eindtijd {get; set;}
 
         public List<Waarneming> Waarnemingen;
 
+        //constructor
         public Bezoek()
         {
             Waarnemingen = new List<Waarneming>();
             this.Starttijd = DateTime.Now;
         }
 
+        /// <summary>
+        /// sluit bezoek af
+        /// </summary>
+        /// <returns>succesion bool</returns>
         public bool Sluitbezoek()
         {
             this.Eindtijd = DateTime.Now;
             return true;
         }
-
-        public bool AddWaarneming(Waarneming waarneming)
+        /// <summary>
+        /// voegt waarneming toe aan lijst van waarnemingen
+        /// </summary>
+        /// <param name="w">toe te voegen waarneming</param>
+        /// <returns>succession bool</returns>
+        public bool AddWaarneming(Waarneming w)
         {
-            Waarnemingen.Add(waarneming);
+            Waarnemingen.Add(w);
             return true;
         }
-
-        public bool VerwijderWaarneming(Waarneming waarneming)
+        /// <summary>
+        /// verwijderd waarneming uit lijst van waarnemingen
+        /// </summary>
+        /// <param name="w"></param>
+        /// <returns></returns>
+        public bool VerwijderWaarneming(Waarneming w)
         {
             return false;
             //TODO
         }
+        /// <summary>
+        /// haalt lijst van waarnemingen op 
+        /// </summary>
+        /// <returns>lijst van op te halen waarnemingen</returns>
         public List<Waarneming> WaarnemingenOphalen()
         {
             return this.Waarnemingen;

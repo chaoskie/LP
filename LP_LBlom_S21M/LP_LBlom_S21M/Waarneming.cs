@@ -15,7 +15,7 @@ namespace LP_LBlom_S21M
     {
         Handler Handler;
         List<PointF> Punten = new List<PointF>();
-        string code = "TA";
+        string code = "VA";
 
         public Waarneming()
         {
@@ -23,36 +23,53 @@ namespace LP_LBlom_S21M
             Handler = new Handler();
             Handler.NewBezoek();
             cbVogelsoort.DataSource = Handler.VogelNamen;
-            cbVogelsoort.DisplayMember = "key";
             cbVogelsoort.SelectedIndex = 0;
             cbVogelSoortenZoeken.ComboBox.DataSource = Handler.VogelNamen;
-            cbVogelSoortenZoeken.ComboBox.DisplayMember = "key";
             cbVogelSoortenZoeken.ComboBox.SelectedIndex = 0;
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            //Handler verwerkt input
-            if (!Handler.NewWaarneming(e.X, e.Y, code, cbVogelsoort.SelectedText))
+            if (e.Button == MouseButtons.Left)//plaatsen van markering
             {
-                MessageBox.Show("De opgegeven informatie is incorect.");
-                return;
+                //Handler verwerkt input
+                if (!Handler.NewWaarneming(e.X, e.Y, code, cbVogelsoort.SelectedIndex))
+                {
+                    MessageBox.Show("De opgegeven informatie is incorect.");
+                    return;
+                }
+
+                //plaatsen van markering
+                //locatie nodig
+                int xmax = panel1.ClientRectangle.Width - 1; //max x definieren
+                int ymax = panel1.ClientRectangle.Height - 1; //max y definieren
+
+                float x = e.X; //select klik x
+                float y = e.Y; //select klik y
+
+                float newx = x / xmax; //instellen van waarde x tussen 0&1
+                float newy = y / ymax; //instellen van waarde y tussen 0&1
+
+                PointF punt = new PointF(newx, newy); //nieuwe klik punt
+                Punten.Add(punt); //toevoegen van klik startpunt
+                Refresh();
             }
 
-            //plaatsen van markering
-            //locatie nodig
-            int xmax = panel1.ClientRectangle.Width - 1; //max x definieren
-            int ymax = panel1.ClientRectangle.Height - 1; //max y definieren
+            if (e.Button == MouseButtons.Right)//ophalen van gegevens
+            {
+                List<string> result = Handler.FindWaarnemingOnClick(e.X, e.Y);
+                if (result.Count <= 0)
+                {
+                    MessageBox.Show("Geen markeringen kunnen vinden");
+                    return;
+                }
+                lblResult.Text = string.Empty;
 
-            float x = e.X; //select klik x
-            float y = e.Y; //select klik y
-
-            float newx = x / xmax; //instellen van waarde x tussen 0&1
-            float newy = y / ymax; //instellen van waarde y tussen 0&1
-
-            PointF punt = new PointF(newx, newy); //nieuwe klik punt
-            Punten.Add(punt); //toevoegen van klik startpunt
-            Refresh();
+                foreach (string s in result)
+                {
+                    lblResult.Text += s + "\n";
+                }
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -92,16 +109,45 @@ namespace LP_LBlom_S21M
         private void btnVA_Click(object sender, EventArgs e)
         {
             code = "VA";
+            btnVA.Enabled = false;
+            btnTI.Enabled = btnNI.Enabled = true;
         }
 
         private void btnTI_Click(object sender, EventArgs e)
         {
             code = "TI";
+            btnTI.Enabled = false;
+            btnVA.Enabled = btnNI.Enabled = true;
         }
 
         private void btnNI_Click(object sender, EventArgs e)
         {
             code = "NI";
+            btnTI.Enabled = btnVA.Enabled = true;
+            btnNI.Enabled = false;
         }
+
+        private void exporterenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //todo
+        }
+
+        private void afsluitenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();           
+        }
+
+        private void berekenBroedpuntenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<string> broedpunten = Handler.berekenBroedpunten();
+            string display = string.Empty;
+            foreach (string s in broedpunten)
+            {
+                display += s + "\n";
+            }
+            MessageBox.Show(display);
+        }
+
+
     }
 }

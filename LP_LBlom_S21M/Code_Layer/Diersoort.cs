@@ -14,6 +14,7 @@ namespace Code_Layer
         public DateTime EindBroedseizoen { get; set; }
         public int BroedPunten { get; set; }
 
+        //constructor
         public Diersoort() { }//nodig voor xml serialisatie
         public Diersoort(string naam, string afk, DateTime startSzn, DateTime eindSzn, int punten)
         {

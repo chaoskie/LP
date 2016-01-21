@@ -12,10 +12,10 @@ namespace Code_Layer
         public string Naam { get; set; }
         public int Punten { get; set; }
 
+        //constructor
         public Code()
-        {
+        {        }//nodig voor XMLserialisatie
 
-        }
         public Code(string afk, string naam, int punt)
         {
             this.Afkorting = afk;

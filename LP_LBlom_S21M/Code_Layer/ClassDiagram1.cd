@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Code_Layer.Diersoort">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAABAAAAAAAAACACAAAAAAAAAA=</HashCode>
+      <FileName>Diersoort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Layer.Code">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAEAACAAAAAAAAAA=</HashCode>
+      <FileName>Code.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Layer.Bezoek">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAQAEAAAAgAAAFAE=</HashCode>
+      <FileName>Bezoek.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Waarnemingen" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Code_Layer.CSVReader">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>CSVReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Layer.Gebied">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Gebied.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Layer.Project">
+    <Position X="5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAEIAAAAAAAAAAAEAAAAAAAAAAAASAEEAAAAAAIAAA=</HashCode>
+      <FileName>Project.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bezoeken" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Code_Layer.Vogel">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Vogel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Code_Layer.Waarneming">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAAAEAAAAAAAAAAAAACEACAAAAACAAgA=</HashCode>
+      <FileName>Waarneming.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Code_Layer.XMLHandler">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJAAAABAAAABAAAAAAEBAAAAAAAAABAAABAAAA=</HashCode>
+      <FileName>XMLHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

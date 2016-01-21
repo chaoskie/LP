@@ -12,7 +12,7 @@ namespace Code_Layer
         public string Kaart { get; set; }
 
         public Gebied()
-        {        }
+        {        }//nodig voor XMLserialisatie
 
         public Gebied(string naam, string kaartPath)
         {

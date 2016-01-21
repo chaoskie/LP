@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Starttijd>2016-01-21T12:00:59.2698888+01:00</Starttijd>
+  <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+  <Bezoeken>
+    <Bezoek>
+      <Starttijd>2016-01-21T12:00:59.2698888+01:00</Starttijd>
+      <Eindtijd>0001-01-01T00:00:00</Eindtijd>
+      <Waarnemingen>
+        <Waarneming>
+          <LocatieX>459</LocatieX>
+          <LocatieY>205</LocatieY>
+          <newVogel>
+            <Naam>Appelvink</Naam>
+            <Afkorting>AV</Afkorting>
+            <StartBroedseizoen>2000-03-15T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-06-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>3</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T12:01:00.7015849+01:00</Tijd>
+        </Waarneming>
+        <Waarneming>
+          <LocatieX>590</LocatieX>
+          <LocatieY>205</LocatieY>
+          <Afkorting>
+            <Afkorting>TI</Afkorting>
+            <Naam>Territorium Indicerend</Naam>
+            <Punten>2</Punten>
+          </Afkorting>
+          <newVogel>
+            <Naam>Geelgors</Naam>
+            <Afkorting>GG</Afkorting>
+            <StartBroedseizoen>2000-04-01T00:00:00</StartBroedseizoen>
+            <EindBroedseizoen>2000-07-20T00:00:00</EindBroedseizoen>
+            <BroedPunten>5</BroedPunten>
+          </newVogel>
+          <Tijd>2016-01-21T12:01:08.7905348+01:00</Tijd>
+        </Waarneming>
+      </Waarnemingen>
+    </Bezoek>
+  </Bezoeken>
+</Project>
