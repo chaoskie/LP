@@ -24,17 +24,43 @@ namespace Code_Layer
             XMLPath = FilePath + "Code_Layer\\XMLContent\\";
         }
 
-        public bool VewerkData(Project proj)
+        public void NewNameFile()
         {
             while (File.Exists(XMLPath + "result" + count.ToString() + ".xml"))
             {
                 count++;
+            }            
+        }
+
+        public bool VewerkData(Project proj, bool newFile)
+        {
+            if (newFile)
+            {
+                NewNameFile();
             }
             filename = "result" + count.ToString() + ".xml";
+
+            // elk overridden field, property, of type heeft een XmlAttributes instance nodig.
+            XmlAttributes xmlAttrs = new XmlAttributes();
+            // maken van het attribuut
+            XmlElementAttribute attr = new XmlElementAttribute();
+            attr.ElementName = "newVogel";
+            attr.Type = typeof(Vogel);
+
+            xmlAttrs.XmlElements.Add(attr);
+
+            // maken van het override attribuut
+            XmlAttributeOverrides attrOverrides = new XmlAttributeOverrides();
+
+            // Adds the type of the class that contains the overridden 
+            // member, as well as the XmlAttributes instance to override it 
+            // with, to the XmlAttributeOverrides.
+            attrOverrides.Add(typeof(Waarneming), "Dier", xmlAttrs);
+
             try
             {
                 Type t = typeof(Code_Layer.Project);
-                XmlSerializer xmls = new XmlSerializer(t);
+                XmlSerializer xmls = new XmlSerializer(t, attrOverrides);
                 using (FileStream fs = new FileStream(XMLPath + filename, FileMode.Create))
                 {
                     xmls.Serialize(fs, proj);

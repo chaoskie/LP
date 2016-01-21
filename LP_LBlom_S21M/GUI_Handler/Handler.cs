@@ -22,7 +22,8 @@ namespace GUI_Handler
             Diersoorten = CSV.Load();
             VulVogelNamen();
             MaakCodes();
-        }
+            xml = new XMLHandler();
+        }       
 
         public void MaakCodes()
         {
@@ -45,6 +46,7 @@ namespace GUI_Handler
         {
             bez = new Bezoek();
             proj.addBezoek(bez);
+            xml.VewerkData(proj, true);
             return true;
         }
 
@@ -58,8 +60,10 @@ namespace GUI_Handler
             {
                 Waarneming w = new Waarneming(xcoord, ycoord, codes.FirstOrDefault(x => x.Afkorting == code), Diersoorten.FirstOrDefault(x => x.Naam == diersoort));
                 bez.AddWaarneming(w);
+                xml.VewerkData(proj, false);
                 return true;
-            }            
+            }
+            
         }
 
 

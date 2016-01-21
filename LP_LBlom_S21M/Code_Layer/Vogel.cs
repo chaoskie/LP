@@ -10,11 +10,14 @@ namespace Code_Layer
     {
         //comparer atributes?
 
+        public Vogel():base() { }//nodig voor xml serialisatie
+
         public Vogel(string naam, string afk, DateTime startSzn, DateTime eindSzn, int punten)
             : base(naam, afk, startSzn, eindSzn, punten)
         {
 
         }
+        
 
         public int Compare(Vogel x, Vogel y)
         {

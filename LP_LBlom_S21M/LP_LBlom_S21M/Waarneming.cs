@@ -33,7 +33,7 @@ namespace LP_LBlom_S21M
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
             //Handler verwerkt input
-            if (!Handler.NewWaarneming(e.X, e.Y, code, cbVogelsoort.SelectedIndex.ToString()))
+            if (!Handler.NewWaarneming(e.X, e.Y, code, cbVogelsoort.SelectedText))
             {
                 MessageBox.Show("De opgegeven informatie is incorect.");
                 return;
