@@ -11,6 +11,9 @@ namespace Code_Layer
         public string Naam { get; set; }
         public string Kaart { get; set; }
 
+        public Gebied()
+        {        }
+
         public Gebied(string naam, string kaartPath)
         {
             this.Kaart = kaartPath;

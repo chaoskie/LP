@@ -14,6 +14,8 @@ namespace Code_Layer
         private string AppPath;
         private string FilePath;
         private string XMLPath;
+        private string filename;
+        int count = 0;
 
         public XMLHandler()
         {
@@ -22,18 +24,30 @@ namespace Code_Layer
             XMLPath = FilePath + "Code_Layer\\XMLContent\\";
         }
 
-        public bool VewerkData(Bezoek bezoek)
-        {/*
-            //stop bezoek in xml file
-            Object o = bezoek;
-            Assembly a = Assembly.Load("Code_Layer");
-            Type t = a.GetType("Code_Layer." + o.GetType().Name);
-
-            XmlSerializer xmls = new XmlSerializer(t);
-            StreamWriter writer = new StreamWriter(XMLPath + "result.xml");
-            xmls.Serialize(writer, bezoek);
-            writer.Close();*/
-            return false;
+        public bool VewerkData(Project proj)
+        {
+            while (File.Exists(XMLPath + "result" + count.ToString() + ".xml"))
+            {
+                count++;
+            }
+            filename = "result" + count.ToString() + ".xml";
+            try
+            {
+                Type t = typeof(Code_Layer.Project);
+                XmlSerializer xmls = new XmlSerializer(t);
+                using (FileStream fs = new FileStream(XMLPath + filename, FileMode.Create))
+                {
+                    xmls.Serialize(fs, proj);
+                }
+            }
+            catch (Exception e)//error afhandelen
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.InnerException);
+                Console.WriteLine(e.StackTrace);
+                return false;
+            }
+            return true;
         }
 
         public bool ExportXML()

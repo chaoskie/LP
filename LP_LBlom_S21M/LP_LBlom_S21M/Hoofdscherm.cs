@@ -13,16 +13,17 @@ namespace LP_LBlom_S21M
 {
     public partial class Hoofdscherm : Form
     {
+        Handler Handler;
         public Hoofdscherm()
         {
             InitializeComponent();
-            Handler Handler = new Handler();
+            Handler = new Handler();
         }
 
         private void btnNewVisit_Click(object sender, EventArgs e)
         {
             Waarneming w = new Waarneming();
-            w.Show();
+            w.Show();              
             this.Hide();
         }
     }

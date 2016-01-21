@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Code_Layer
 {
-    [Serializable]
     public class Bezoek
     {      
         public DateTime Starttijd ;
@@ -30,8 +29,8 @@ namespace Code_Layer
 
         public bool AddWaarneming(Waarneming waarneming)
         {
-            return false;
-            //TODO
+            Waarnemingen.Add(waarneming);
+            return true;
         }
 
         public bool VerwijderWaarneming(Waarneming waarneming)

@@ -17,6 +17,9 @@ namespace Code_Layer
         public Diersoort Dier { get; set; }
         public DateTime Tijd { get; set; }
 
+        public Waarneming()//nodig voor serialize
+        {        }
+
         public Waarneming(PointF X, PointF Y, Code afk, Diersoort dier)
         {
             this.Afkorting = afk;
