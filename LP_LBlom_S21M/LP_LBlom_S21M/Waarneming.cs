@@ -15,6 +15,7 @@ namespace LP_LBlom_S21M
     {
         Handler Handler;
         List<PointF> Punten = new List<PointF>();
+        string code = "TA";
 
         public Waarneming()
         {
@@ -22,12 +23,23 @@ namespace LP_LBlom_S21M
             Handler = new Handler();
             Handler.NewBezoek();
             cbVogelsoort.DataSource = Handler.VogelNamen;
-            cbVogelsoort.DisplayMember = "Name";
+            cbVogelsoort.DisplayMember = "key";
+            cbVogelsoort.SelectedIndex = 0;
             cbVogelSoortenZoeken.ComboBox.DataSource = Handler.VogelNamen;
+            cbVogelSoortenZoeken.ComboBox.DisplayMember = "key";
+            cbVogelSoortenZoeken.ComboBox.SelectedIndex = 0;
         }
 
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
+            //Handler verwerkt input
+            if (!Handler.NewWaarneming(e.X, e.Y, code, cbVogelsoort.SelectedIndex.ToString()))
+            {
+                MessageBox.Show("De opgegeven informatie is incorect.");
+                return;
+            }
+
+            //plaatsen van markering
             //locatie nodig
             int xmax = panel1.ClientRectangle.Width - 1; //max x definieren
             int ymax = panel1.ClientRectangle.Height - 1; //max y definieren
@@ -41,17 +53,10 @@ namespace LP_LBlom_S21M
             PointF punt = new PointF(newx, newy); //nieuwe klik punt
             Punten.Add(punt); //toevoegen van klik startpunt
             Refresh();
-
-            //handler create method
-            //place tag VA, TI, NI
-            //selecteer dier
-            //plaats markering
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            //TODO
-
             //grafische tekeningen
             Graphics Grafisch = e.Graphics;
 
@@ -70,18 +75,33 @@ namespace LP_LBlom_S21M
             int yMaxint = panel1.ClientRectangle.Height - 1;
 
             int index = 0; //zet teken index van de size
-            
+
             Pen black = new Pen(Color.Purple, (float)((xMax / 280) * 1));
 
             foreach (PointF Punt in Punten)
             {
                 float x = (float)(Punt.X * xMaxint); //rekend nieuwe coordinaten na resize screen
                 float y = (float)(Punt.Y * yMaxint); // rekend nieuwe coordinaten na resize screen
-                             
+
                 Grafisch.DrawEllipse(black, (Punt.X * xMaxint) - (4 / 2), (Punt.Y * yMaxint) - (4 / 2), 5, 5); //tekent nieuwe figuren      
 
                 index++;
-            }            
+            }
+        }
+
+        private void btnVA_Click(object sender, EventArgs e)
+        {
+            code = "VA";
+        }
+
+        private void btnTI_Click(object sender, EventArgs e)
+        {
+            code = "TI";
+        }
+
+        private void btnNI_Click(object sender, EventArgs e)
+        {
+            code = "NI";
         }
     }
 }

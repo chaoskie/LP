@@ -130,6 +130,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -170,6 +171,7 @@
             this.btnVA.TabIndex = 2;
             this.btnVA.Text = "VA";
             this.btnVA.UseVisualStyleBackColor = true;
+            this.btnVA.Click += new System.EventHandler(this.btnVA_Click);
             // 
             // btnTI
             // 
@@ -179,6 +181,7 @@
             this.btnTI.TabIndex = 3;
             this.btnTI.Text = "TI";
             this.btnTI.UseVisualStyleBackColor = true;
+            this.btnTI.Click += new System.EventHandler(this.btnTI_Click);
             // 
             // btnNI
             // 
@@ -188,6 +191,7 @@
             this.btnNI.TabIndex = 4;
             this.btnNI.Text = "NI";
             this.btnNI.UseVisualStyleBackColor = true;
+            this.btnNI.Click += new System.EventHandler(this.btnNI_Click);
             // 
             // label2
             // 

@@ -11,8 +11,8 @@ namespace Code_Layer
     [Serializable]
     public class Waarneming
     {
-        public PointF LocatieX { get; set; }
-        public PointF LocatieY { get; set; }
+        public int LocatieX { get; set; }
+        public int LocatieY { get; set; }
         public Code Afkorting { get; set; }
         public Diersoort Dier { get; set; }
         public DateTime Tijd { get; set; }
@@ -20,7 +20,7 @@ namespace Code_Layer
         public Waarneming()//nodig voor serialize
         {        }
 
-        public Waarneming(PointF X, PointF Y, Code afk, Diersoort dier)
+        public Waarneming(int X, int Y, Code afk, Diersoort dier)
         {
             this.Afkorting = afk;
             this.Dier = dier;
